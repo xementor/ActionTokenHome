@@ -8,7 +8,7 @@ export default function Home() {
       <Head>
         <title>Action Tokens</title>
         <meta name="description" content="Action Tokens Homepage" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       <Navibar/>
       
