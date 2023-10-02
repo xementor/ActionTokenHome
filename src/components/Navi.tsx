@@ -6,7 +6,7 @@ import React, { useState, useEffect, useRef } from 'react';
 export const Navibar = () => {
   const [isSoundOn, setIsSoundOn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null); 
 
   const toggleSound = () => {
     setIsSoundOn((prevState) => !prevState);
@@ -16,7 +16,6 @@ export const Navibar = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
   };
 
-  // Function to close the mobile menu
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
