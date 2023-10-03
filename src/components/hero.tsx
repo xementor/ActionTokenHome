@@ -4,18 +4,17 @@ const Hero = () => {
   const videoUrl =
     'https://firebasestorage.googleapis.com/v0/b/action-atp-5.appspot.com/o/ActionverseMap.webm?alt=media&token=89bc66ff-4a4e-4bf0-82ac-3a4128048a00';
 
-  const videoRef = useRef(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(true);
 
   const togglePlayPause = () => {
     if (videoRef.current) {
-      if (videoRef.current.paused) {
-        videoRef.current.play();
-        setIsPlaying(true);
-      } else {
+      if (isPlaying) {
         videoRef.current.pause();
-        setIsPlaying(false);
+      } else {
+        void videoRef.current.play();
       }
+      setIsPlaying(!isPlaying);
     }
   };
 
@@ -26,6 +25,7 @@ const Hero = () => {
           ref={videoRef}
           autoPlay
           loop
+          onClick={togglePlayPause}
           className="rounded-xl border-amber-950 backdrop-blur border-8 w-[90%] md:w-[60%] h-auto"
         >
           <source src={videoUrl} type="video/webm" />
@@ -33,17 +33,8 @@ const Hero = () => {
         </video>
       </div>
 
-      <div className="flex justify-center mt-2">
-        <button
-          onClick={togglePlayPause}
-          className="bg-lime-600 p-4 m-2 rounded-md shadow-inner hover:scale-105 text-zinc-300 backdrop-blur-xl hover:text-white py-2 font-extrabold"
-        >
-          {isPlaying ? 'Pause' : 'Play'}
-        </button>
-      </div>
-
-      <div>
-        <div className="hidden flex-row justify-evenly mt-2 md:flex">
+      <div className='flex justify-center'>
+        <div className="w-[80%] hidden flex-row justify-evenly mt-2 md:flex">
           <a
             href="https://collections.action-tokens.com/"
             className="flex bg-lime-600 p-4 m-2 rounded-md shadow-inner hover:scale-105 text-zinc-300 backdrop-blur-xl hover:text-white py-2 font-extrabold"
