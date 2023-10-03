@@ -6,14 +6,16 @@ const Hero = () => {
 
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
-  
+
   const togglePlayPause = () => {
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
     }
   };
 
@@ -25,16 +27,20 @@ const Hero = () => {
           autoPlay
           loop
           className="rounded-xl border-amber-950 backdrop-blur border-8 w-[90%] md:w-[60%] h-auto"
-          onClick={togglePlayPause}
-        >  {isPlaying ? 'Pause' : 'Play'}
+        >
           <source src={videoUrl} type="video/webm" />
           Your browser does not support the video tag.
         </video>
-        
-
       </div>
 
-      
+      <div className="flex justify-center mt-2">
+        <button
+          onClick={togglePlayPause}
+          className="bg-lime-600 p-4 m-2 rounded-md shadow-inner hover:scale-105 text-zinc-300 backdrop-blur-xl hover:text-white py-2 font-extrabold"
+        >
+          {isPlaying ? 'Pause' : 'Play'}
+        </button>
+      </div>
 
       <div>
         <div className="hidden flex-row justify-evenly mt-2 md:flex">
