@@ -6,7 +6,7 @@ const Hero = () => {
 
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(true);
-
+  
   const togglePlayPause = () => {
     if (videoRef.current.paused) {
       videoRef.current.play();
