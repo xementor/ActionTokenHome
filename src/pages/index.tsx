@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { Navibar } from "~/components/Navi";
+import Hero from "~/components/hero";
 
 export default function Home() {
 
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/logo.png" />
       </Head>
       <Navibar/>
+      <Hero/>
       
     </>
   );

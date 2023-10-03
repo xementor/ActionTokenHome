@@ -46,7 +46,7 @@ export const Navibar = () => {
           </div>
           <div className="hidden md:flex flex-row md:gap-5 lg:gap-10 font-bold items-center w-max">
             <a href="#" className="text-gray-300 hover:text-white hover:scale-110 hidden lg:flex">Home</a>
-            <a href="#" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
+            <a href="https://collections.action-tokens.com/" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
               Collection
             </a>
             <a href="#" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
@@ -94,19 +94,22 @@ export const Navibar = () => {
       </nav>
       
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white  absolute top-0 -right-4 rounded shadow-lg w-full h-full m-2">
-          <a href="#" className="block text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+        <div className="md:hidden shadow-xl bg-slate-100/80 justify-center absolute flex -top-2 rounded backdrop-blur w-full h-full m-2">
+          <div className='border-2 border-cyan-950  '>
+          <div className='h-10'></div>
+          <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
             Home
           </a>
-          <a href="#" className="block text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="https://collections.action-tokens.com/" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
             Collection
           </a>
-          <a href="#" className="block text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
             Gallery
           </a>
-          <a href="#" className="block text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
             Map
           </a>
+          </div>
           <div className="flex justify-end">
             <div className="cursor-pointer" onClick={closeMobileMenu}>
               <Image
