@@ -4,13 +4,7 @@ import Image from 'next/image';
 import React, { useState, useEffect, useRef } from 'react';
 
 export const Navibar = () => {
-  const [isSoundOn, setIsSoundOn] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null); 
-
-  const toggleSound = () => {
-    setIsSoundOn((prevState) => !prevState);
-  };
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prevState) => !prevState);
@@ -19,20 +13,6 @@ export const Navibar = () => {
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
   };
-
-  useEffect(() => {
-    const audioElement = audioRef.current;
-
-    if (audioElement) {
-      if (isSoundOn) {
-        audioElement.play().catch((error) => {
-          console.error('Failed to play audio:', error);
-        });
-      } else {
-        audioElement.pause();
-      }
-    }
-  }, [isSoundOn]);
 
   return (
     <div className='w-full items-center flex justify-center overflow-hidden'>
@@ -55,29 +35,6 @@ export const Navibar = () => {
             <a href="#" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
               Map
             </a>
-            <div className='flex w-10 items-center justify-center'>
-              {isSoundOn ? (
-                <Image
-                  src="/soundon.png"
-                  alt="Turn music on"
-                  id="soundon"
-                  width={40}
-                  height={40}
-                  className='hover:scale-110 cursor-pointer'
-                  onClick={toggleSound}
-                />
-              ) : (
-                <Image
-                  src="/soundoff.png"
-                  alt="Turn music off"
-                  id="soundoff"
-                  width={50}
-                  height={50}
-                  className='hover:scale-110 cursor-pointer'
-                  onClick={toggleSound}
-                />
-              )}
-            </div>
           </div>
           <div className='flex flex-row items-center justify-center md:hidden'>
             <div className="cursor-pointer" onClick={toggleMobileMenu}>
