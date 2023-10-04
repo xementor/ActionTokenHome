@@ -51,20 +51,26 @@ export const Navibar = () => {
       </nav>
       
       {isMobileMenuOpen && (
-        <div className="md:hidden shadow-xl bg-slate-100/80 justify-center absolute flex -top-2 rounded backdrop-blur w-full h-full m-2">
+        <div className="z-50 md:hidden shadow-xl bg-slate-100/80 justify-center absolute flex -top-2 rounded backdrop-blur w-full h-full m-2">
           <div className='border-2 border-cyan-950  '>
           <div className='h-10'></div>
+          <div>
+            
+          </div>
           <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
             Home
           </a>
           <a href="https://collections.action-tokens.com/" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
             Collection
           </a>
-          <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="https://gallery.action-tokens.com/" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
             Gallery
           </a>
-          <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="https://map.action-tokens.com/" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
             Map
+          </a>
+          <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+            About
           </a>
           </div>
           <div className="flex justify-end">
