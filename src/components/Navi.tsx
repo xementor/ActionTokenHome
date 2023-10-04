@@ -52,28 +52,26 @@ export const Navibar = () => {
       
       {isMobileMenuOpen && (
         <div className="z-50 md:hidden shadow-xl bg-slate-100/80 justify-center absolute flex -top-2 rounded backdrop-blur w-full h-full m-2">
-          <div className='border-2 border-cyan-950  '>
+          <div className='border-4 border-cyan-950  items-center flex flex-col w-[60%] gap-5'>
           <div className='h-10'></div>
-          <div>
-            
-          </div>
-          <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <Image src="/logo.png" alt="Action Tokens Logo" width={100} height={100} className='m-4 mb-10'/>
+          <a href="#" className="flex justify-center text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Home
           </a>
-          <a href="https://collections.action-tokens.com/" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="https://collections.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Collection
           </a>
-          <a href="https://gallery.action-tokens.com/" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="https://gallery.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Gallery
           </a>
-          <a href="https://map.action-tokens.com/" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="https://map.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Map
           </a>
-          <a href="#" className="flex text-gray-800 hover:text-black py-2" onClick={closeMobileMenu}>
+          <a href="#" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             About
           </a>
-          </div>
-          <div className="flex justify-end">
+          
+          <div className="flex ">
             <div className="cursor-pointer" onClick={closeMobileMenu}>
               <Image
                 src="/close.png"
@@ -82,6 +80,7 @@ export const Navibar = () => {
                 height={24}
                 className='hover:scale-110'
               />
+            </div>
             </div>
           </div>
         </div>
