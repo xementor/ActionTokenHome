@@ -4,19 +4,16 @@ const Hero = () => {
   const videoUrl =
     'https://firebasestorage.googleapis.com/v0/b/action-atp-5.appspot.com/o/ActionverseMap.webm?alt=media&token=89bc66ff-4a4e-4bf0-82ac-3a4128048a00';
 
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-  const [isPlaying, setIsPlaying] = useState(true);
-
-  const togglePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        void videoRef.current.play();
+    const videoRef = useRef<HTMLVideoElement | null>(null);
+    const [isMuted, setIsMuted] = useState(true);
+    
+    const toggleMuteUnmute = () => {
+      if (videoRef.current) {
+        videoRef.current.muted = !isMuted;
+        setIsMuted(!isMuted);
+        console.log(isMuted);
       }
-      setIsPlaying(!isPlaying);
-    }
-  };
+    };
 
   return (
     <div>
@@ -24,10 +21,11 @@ const Hero = () => {
         <video
           ref={videoRef}
           autoPlay
+          muted
           loop
-          onClick={togglePlayPause}
+          onClick={toggleMuteUnmute}
           className="rounded-xl border-amber-950 backdrop-blur border-8 w-[90%] md:w-[60%] h-auto"
-        >
+        >{isMuted ? "Unmute" : "Mute"}
           <source src={videoUrl} type="video/webm" />
           Your browser does not support the video tag.
         </video>
