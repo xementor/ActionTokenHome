@@ -52,9 +52,9 @@ export const Navibar = () => {
       
       {isMobileMenuOpen && (
         <div className="z-50 md:hidden shadow-xl bg-slate-100/80 justify-center absolute flex -top-2 rounded backdrop-blur w-full h-full m-2">
-          <div className='border-4 border-cyan-950  items-center flex flex-col w-[60%] gap-5'>
+          <div className='items-center flex flex-col w-[65%] gap-5'>
           <div className='h-10'></div>
-          <Image src="/logo.png" alt="Action Tokens Logo" width={100} height={100} className='m-4 mb-10'/>
+          <Image src="/logo.png" alt="Action Tokens Logo" width={120} height={120} className='m-4 mb-10'/>
           <a href="#" className="flex justify-center text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Home
           </a>
