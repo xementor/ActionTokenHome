@@ -3,16 +3,16 @@ import { type AppType } from "next/app";
 import { api } from "~/utils/api";
 
 import "~/styles/globals.css";
-import { Poppins } from 'next/font/google'
+import { Nunito } from 'next/font/google'
 
-const poppins = Poppins({ 
+const nunito = Nunito({ 
   weight: ["400", "500", "600", "700", "800", "900"],
   subsets: ['latin'] 
 })
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <main className={poppins.className}>
+    <main className={nunito.className}>
       <Component {...pageProps} />
     </main>
   );

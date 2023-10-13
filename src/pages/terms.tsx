@@ -9,8 +9,7 @@ const TermsPage: React.FC = () => {
             <div className="h-10"></div>
             <div className="flex flex-col max-w-[75%]">
                 <div className="flex flex-col items-center">
-                <h1>ActionXR</h1>
-                <h2>Terms of Service</h2>
+                <h2 className="font-extrabold">Terms of Service</h2>
                 <p>
                     Please also review ActionXR&apos;s updated Privacy Policy that takes effect on March 17th, 2022.
                 </p>

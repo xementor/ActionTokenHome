@@ -16,7 +16,7 @@ export const Navibar = () => {
 
   return (
     <div className='w-full items-center flex justify-center overflow-hidden'>
-      <nav className="bg-gradient-to-r from-lime-900 via-lime-800 to-lime-900 rounded-2xl p-4 m-4 mt-10 justify-between flex w-4/5">
+      <nav className="bg-gradient-to-r from-lime-900 via-lime-800 to-lime-900 rounded-2xl p-4 m-4 mt-8 justify-between flex w-4/5">
         <div className="flex items-center md:px-2 lg:px-4 justify-between flex-1 md:mx-2 lg:mx-10">
           <div className="text-white font-bold text-xl">
             <div className='flex flex-row items-center justify-center'>

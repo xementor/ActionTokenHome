@@ -76,7 +76,11 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      asd
+      <div className='flex flex-row justify-end gap-x-10 mr-20 text-zinc-200 font-bold'>
+      <a href='/terms'>Privacy Policy</a>
+      <a href='/terms'>Terms</a>
+      <a href='https://t.me/actiontokens'>Support</a>
+      </div>
     </div>
   );
 };
