@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable react-hooks/exhaustive-deps */
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState, useEffect, useRef } from 'react';
 
 export const Navibar = () => {
@@ -55,21 +56,21 @@ export const Navibar = () => {
           <div className='items-center flex flex-col w-[65%] gap-5'>
           <div className='h-10'></div>
           <Image src="/logo.png" alt="Action Tokens Logo" width={120} height={120} className='m-4 mb-10'/>
-          <a href="#" className="flex justify-center text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
+          <Link href="#" className="flex justify-center text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Home
-          </a>
-          <a href="https://collections.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
+          </Link>
+          <Link href="https://collections.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Collection
-          </a>
-          <a href="https://gallery.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
+          </Link>
+          <Link href="https://gallery.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Gallery
-          </a>
-          <a href="https://map.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
+          </Link>
+          <Link href="https://map.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Map
-          </a>
-          <a href="#" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
+          </Link>
+          <Link href="#" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             About
-          </a>
+          </Link>
           
           <div className="flex ">
             <div className="cursor-pointer" onClick={closeMobileMenu}>
