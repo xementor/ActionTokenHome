@@ -30,10 +30,10 @@ export const Navibar = () => {
             <a href="https://collections.action-tokens.com/" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
               Collection
             </a>
-            <a href="#" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
+            <a href="https://gallery.action-tokens.com/" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
               Gallery
             </a>
-            <a href="#" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
+            <a href="https://www.map.action-tokens.com/" className="text-gray-300 hover:text-white hover:scale-110" onClick={closeMobileMenu}>
               Map
             </a>
           </div>
@@ -65,7 +65,7 @@ export const Navibar = () => {
           <Link href="https://gallery.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Gallery
           </Link>
-          <Link href="https://map.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
+          <Link href="https://www.map.action-tokens.com/" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
             Map
           </Link>
           <Link href="#" className="flex justify-center  text-gray-800 scale-95 hover:scale-100 w-[90%] rounded-xl bg-slate-100/50 backdrop:blur-xl shadow-black shadow-md hover:text-black py-2" onClick={closeMobileMenu}>
